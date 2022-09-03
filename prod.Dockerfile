@@ -9,7 +9,7 @@ RUN apt-get update \
 
 WORKDIR /app
 
-COPY package.json yarn.lock .
+COPY package.json yarn.lock ./
 
 RUN yarn install
 
