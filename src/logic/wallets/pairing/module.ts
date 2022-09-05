@@ -17,13 +17,13 @@ export const PAIRING_MODULE_NAME = 'Safe Mobile'
 let client = ''
 const getClientMeta = (): IClientMeta => {
   // Only instantiate parser if no app or client is set
-  // if (!client) {
-  //   const parser = new UAParser()
-  //   const browser = parser.getBrowser()
-  //   const os = parser.getOS()
+  if (!client) {
+    const parser = new UAParser()
+    const browser = parser.getBrowser()
+    const os = parser.getOS()
 
-  //   client = `${browser.name} ${browser.major} (${os.name})`
-  // }
+    client = `${browser.name} ${browser.major} (${os.name})`
+  }
 
   const app = `Safe Web v${APP_VERSION}`
   const logo = `${location.origin}${PUBLIC_URL}/resources/logo_120x120.png`
@@ -31,7 +31,7 @@ const getClientMeta = (): IClientMeta => {
   return {
     name: app,
     description: `${client};${app}`,
-    url: '',
+    url: 'https://gnosis-safe.io/app',
     icons: [logo],
   }
 }

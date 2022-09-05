@@ -129,7 +129,7 @@ const Sidebar = ({
 
         <HelpList>
           <Track {...OVERVIEW_EVENTS.HELP_CENTER}>
-            <HelpCenterLink href="https://help.gnosis-safe.io/en/" target="_blank" title="Help Center of Gnosis Safe">
+            <HelpCenterLink href="https://discord.com/invite/mWsHFqN5Zf" target="_blank" title="Help Center of Klaytn Safe">
               <ListIcon type="question" color="secondary" size="sm" />
               <StyledListItemText>Help Center</StyledListItemText>
             </HelpCenterLink>

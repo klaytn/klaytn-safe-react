@@ -57,27 +57,17 @@ const Footer = (): React.ReactElement => {
 
   return (
     <footer className={classes.footer}>
-      <span className={classes.item}>©{date.getFullYear()} Klaytn Foundation</span>
-      <span className={classes.sep}>|</span>
-      <Link className={cn(classes.item, classes.link)} target="_blank" to="https://gnosis-safe.io/terms">
-        Terms
+      <Link className={cn(classes.item, classes.link)} target="_blank" to="https://klaytn.foundation/">
+        ©{date.getFullYear()} Klaytn Foundation
       </Link>
+      <span className={classes.sep}>|</span>
+      <span className={classes.item}>Terms</span>
       <span className={classes.sep}>|</span>
       <Link className={cn(classes.item, classes.link)} target="_blank" to="https://gnosis-safe.io/privacy">
         Privacy
       </Link>
       <span className={classes.sep}>|</span>
-      <Link className={cn(classes.item, classes.link)} target="_blank" to="https://gnosis-safe.io/licenses">
-        Licenses
-      </Link>
-      <span className={classes.sep}>|</span>
-      <Link
-        className={cn(classes.item, classes.link)}
-        target="_blank"
-        to="https://github.com/gnosis/safe-react/releases"
-      >
-        {appVersion}
-      </Link>
+      <span className={classes.item}>Licenses</span>
     </footer>
   )
 }
