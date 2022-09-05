@@ -112,7 +112,7 @@ function OwnersAndConfirmationsNewSafeStep(): ReactElement {
           transaction before it gets executed. In general, the more confirmations required, the more secure your Safe
           is.
           <StyledLink
-            href="https://help.gnosis-safe.io/en/articles/4772567-what-gnosis-safe- setup-should-i-use"
+            href="https://github.com/klaytn/klaytn-safe-react/blob/dev/README.md"
             target="_blank"
             rel="noreferrer"
             title="Learn about which Safe setup to use"
