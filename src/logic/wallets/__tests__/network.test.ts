@@ -85,25 +85,6 @@ describe('src/logic/wallets/utils/network', () => {
 
       expect(shouldSwitchNetwork(wallet as Wallet)).toBe(false)
     })
-    it('should return false when it is a hardware wallet', () => {
-      expect(
-        shouldSwitchNetwork({
-          name: WALLET_PROVIDER.LEDGER,
-        } as Wallet),
-      ).toBe(false)
-
-      expect(
-        shouldSwitchNetwork({
-          name: WALLET_PROVIDER.TREZOR,
-        } as Wallet),
-      ).toBe(false)
-
-      expect(
-        shouldSwitchNetwork({
-          type: 'hardware',
-        } as Wallet),
-      ).toBe(false)
-    })
     describe('should return true when networks mismatch', () => {
       it('for numeric `chainId`s', () => {
         const wallet = {

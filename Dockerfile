@@ -6,11 +6,15 @@ RUN apt-get update \
 
 WORKDIR /app
 
-COPY package.json yarn.lock .
+COPY package.json yarn.lock ./
 
 RUN yarn install
 
 COPY . .
+
+RUN rm -rf ./node_modules/@gnosis.pm/safe-deployments/dist/assets/v1.3.0
+
+RUN cp -r ./safe-deployment-assets/* ./node_modules/@gnosis.pm/safe-deployments/dist/assets/
 
 EXPOSE 3000
 

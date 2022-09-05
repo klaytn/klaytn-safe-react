@@ -13,25 +13,12 @@ export const CHAIN_ID: Record<ChainName, ChainId> = {
   ETHEREUM: '1',
   RINKEBY: '4',
   VOLTA: '73799',
+  BAOBAB: '1001',
+  CYPRESS: '8217'
 }
 
 // Values match that required of onboard and returned by CGW
 export enum WALLETS {
   SAFE_MOBILE = 'safeMobile',
-  METAMASK = 'metamask',
-  TALLYHO = 'tally',
-  WALLET_CONNECT = 'walletConnect',
-  TREZOR = 'trezor',
-  LEDGER = 'ledger',
-  TRUST = 'trust',
-  FORTMATIC = 'fortmatic',
-  PORTIS = 'portis',
-  AUTHEREUM = 'authereum',
-  TORUS = 'torus',
-  COINBASE = 'coinbase',
-  WALLET_LINK = 'walletLink',
-  OPERA = 'opera',
-  OPERA_TOUCH = 'operaTouch',
-  LATTICE = 'lattice',
-  KEYSTONE = 'keystone',
+  METAMASK = 'metamask'
 }
