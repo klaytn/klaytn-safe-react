@@ -12,7 +12,7 @@ const StyledIcon = styled(Icon)`
 
 const HelpInfo = (): ReactElement => (
   <Link
-    href="https://help.gnosis-safe.io/en/articles/5299068-address-book-export-and-import"
+    href="https://github.com/klaytn/klaytn-safe-react/blob/dev/README.md"
     target="_blank"
     rel="noreferrer"
     title="Export & import info"
