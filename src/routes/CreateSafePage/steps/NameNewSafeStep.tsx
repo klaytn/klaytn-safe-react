@@ -109,13 +109,9 @@ function NameNewSafeStep(): ReactElement {
       <Block margin="lg">
         <Paragraph color="primary" noMargin size="lg">
           By continuing you consent to the{' '}
-          <Link href="https://gnosis-safe.io/terms" rel="noopener noreferrer" target="_blank">
-            terms of use
-          </Link>
+          terms of use
           {' and '}
-          <Link href="https://gnosis-safe.io/privacy" rel="noopener noreferrer" target="_blank">
-            privacy policy
-          </Link>
+          privacy policy
           .
         </Paragraph>
       </Block>
