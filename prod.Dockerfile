@@ -19,9 +19,8 @@ RUN yarn install
 
 COPY . .
 
-RUN rm -rf ./node_modules/@gnosis.pm/safe-deployments/dist/assets/v1.3.0
-
 RUN cp -r ./safe-deployment-assets/* ./node_modules/@gnosis.pm/safe-deployments/dist/assets/
+RUN cp -r ./safe-deployment-assets/* ./node_modules/@gnosis.pm/safe-core-sdk/node_modules/@gnosis.pm/safe-deployments/dist/assets/
 
 RUN yarn build
 
