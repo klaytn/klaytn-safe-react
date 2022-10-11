@@ -39,7 +39,6 @@ jobs:
         env:
           PARAMETER_STORE_DEV: ${{ secrets.PARAMETER_STORE_DEV }}
         run: |
-          sed -i -e "s+\/app+\/+g" package.json
           aws ssm get-parameter --name $PARAMETER_STORE_DEV --with-decryption --output text --query Parameter.Value > .env
 
       - name: Build static files
