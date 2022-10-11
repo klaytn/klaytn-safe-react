@@ -30,6 +30,11 @@ jobs:
       - name: Installing dependencies
         run: yarn install
 
+      - name: Copy assets to node_modules
+        run: |
+          cp -r ./safe-deployment-assets/* ./node_modules/@gnosis.pm/safe-deployments/dist/assets/
+          cp -r ./safe-deployment-assets/* ./node_modules/@gnosis.pm/safe-core-sdk/node_modules/@gnosis.pm/safe-deployments/dist/assets/
+          
       - name: Change homepage and get .env
         env:
           PARAMETER_STORE_DEV: ${{ secrets.PARAMETER_STORE_DEV }}
@@ -39,7 +44,7 @@ jobs:
 
       - name: Build static files
         run: yarn build
-        
+
       - name: Sync to S3 bucket and validation cloudfront 
         env:
           S3_BUCKET_DEV: ${{ secrets.S3_BUCKET_DEV }}
