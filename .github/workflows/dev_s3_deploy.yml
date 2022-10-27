@@ -1,4 +1,4 @@
-name: klaytn-safe-react deploy workflow
+name: klaytn-safe-react dev deploy workflow
 on:
   push:
     branches:
