@@ -12,7 +12,6 @@ import Img from 'src/components/layout/Img'
 import Row from 'src/components/layout/Row'
 import { headerHeight, md, screenSm, sm } from 'src/theme/variables'
 import { useStateHandler } from 'src/logic/hooks/useStateHandler'
-import SafeLogo from '../assets/gnosis-safe-multisig-logo.svg'
 import { ROOT_ROUTE } from 'src/routes/routes'
 import WalletSwitch from 'src/components/WalletSwitch'
 import Divider from 'src/components/layout/Divider'
@@ -21,6 +20,7 @@ import { useSelector } from 'react-redux'
 import { OVERVIEW_EVENTS } from 'src/utils/events/overview'
 import Track from 'src/components/Track'
 import Notifications from 'src/components/AppLayout/Header/components/Notifications'
+import SafeLogo from '../assets/klaytn-safe-multisig-logo.png'
 
 const styles = () => ({
   root: {
@@ -41,16 +41,15 @@ const styles = () => ({
     zIndex: 1301,
   },
   logo: {
-    flexBasis: '140px',
-    flexShrink: '0',
-    flexGrow: '0',
-    maxWidth: '55px',
-    padding: sm,
-    marginTop: '4px',
     [`@media (min-width: ${screenSm}px)`]: {
       maxWidth: 'none',
       paddingLeft: md,
       paddingRight: md,
+    },
+    '& a': {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
     },
   },
   wallet: {
@@ -67,6 +66,28 @@ const styles = () => ({
     minWidth: '180px',
     padding: '0',
   },
+  bannerLogo: {
+    display: 'flex',
+    flexDirection: 'row',
+    textDecoration: 'none'
+  },
+  bannerLogoTitle: {
+    display: 'flex',
+    flexDirection: 'column',
+    width: "200px",
+    paddingLeft: '5px'
+  },
+  bannerLogoTitleContent: {
+    color: '#000',
+    fontSize: '16px',
+    fontWeight: 600
+  },
+  bannerLogoSubTitleContent: {
+    color: '#958B8B'
+  },
+  bannerLink: {
+    textDecoration: 'none'
+  }
 })
 
 const WalletPopup = ({ anchorEl, providerDetails, classes, open, onClose }) => {
@@ -101,7 +122,17 @@ const Layout = ({ classes, providerDetails, providerInfo }) => {
       <Col className={classes.logo} middle="xs" start="xs">
         <Track {...OVERVIEW_EVENTS.HOME}>
           <Link to={ROOT_ROUTE}>
-            <Img alt="Gnosis Safe" height={36} src={SafeLogo} testId="heading-gnosis-logo" id="safe-logo" />
+            <div className={classes.bannerLogo}>
+              <Img alt="Klaytn Safe" height={36} src={SafeLogo} testId="heading-gnosis-logo" id="safe-logo" />
+              <div className={classes.bannerLogoTitle}>
+                <div className={classes.bannerLogoTitleContent}>
+                  Klaytn Safe
+                </div>
+                <div className={classes.bannerLogoSubTitleContent}>
+                  (based on Gnosis Safe)
+                </div>
+              </div>
+            </div>
           </Link>
         </Track>
       </Col>

@@ -1,33 +1,6 @@
-# Gnosis Safe
+# Klaytn Safe web UI
 
-![license](https://img.shields.io/github/license/gnosis/safe-react)
-![build](https://img.shields.io/github/workflow/status/gnosis/safe-react/Deploy%20to%20Mainnet%20network/main)
-![tests](https://img.shields.io/github/workflow/status/gnosis/safe-react/Unit%20tests%20&%20coverage/main?label=tests)
-![coverage](https://coveralls.io/repos/github/gnosis/safe-react/badge.svg?branch=main)
-![release](https://img.shields.io/github/v/release/gnosis/safe-react)
-
-The most trusted platform to store digital assets on Ethereum. More info at [gnosis-safe.io](https://gnosis-safe.io/)
-
-For technical information please refer to the [Gnosis Developer Portal](https://docs.gnosis.io/safe/).
-
-For support requests, please open up a [bug issue](https://github.com/gnosis/safe-react/issues/new?template=bug-report.md) or reach out via [Discord](https://chat.gnosis-safe.io).
-
-## Transactions
-
-Please see the [transaction](docs/transactions.md) notes for more information about transaction details.
-
-## Related repos
-
-- [safe-react-e2e-tests](https://github.com/gnosis/safe-react-e2e-tests)
-- [safe-react-gateway-sdk](https://github.com/gnosis/safe-react-gateway-sdk)
-- [safe-react-components](https://github.com/gnosis/safe-react-components)
-
-## Deployed environments
-
-- Production: https://gnosis-safe.io/app/
-- Staging: https://safe-team.staging.gnosisdev.com/app/
-- Dev: https://safe-team.dev.gnosisdev.com/app/
-- PRs: `https://pr<PR_NUMBER>--safereact.review-safe.gnosisdev.com/app/`
+Klaytn Safe is the most trusted platform to store digital assets on Ethereum.
 
 ## Getting Started
 
@@ -112,16 +85,9 @@ yarn lint:fix
 
 ## Deployment
 
-### Dev & staging
-
-The code is deployed to a testing website automatically on each push via a GitHub Action.
-The GitHub Action will create a new subdomain and post the link as a comment in the PR.
-
-When pushing to the `main` branch, the code will be automatically deployed to [staging](https://safe-team.staging.gnosisdev.com/).
-
 ### Production
 
-Deployment to production is done manually. Please see the [release procedure](docs/release-procedure.md) notes for details.
+Deployment to production is done manually.
 
 ## Built With
 
@@ -130,14 +96,6 @@ Deployment to production is done manually. Please see the [release procedure](do
 - [redux, immutable, reselect, final-form](https://redux.js.org/) - React ecosystem libraries
 
 ![app diagram](https://user-images.githubusercontent.com/381895/129330828-c067425b-d20b-4f67-82c7-c0598deb453a.png)
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](https://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/gnosis/gnosis-team-safe/tags).
 
 ## License
 

@@ -23,21 +23,6 @@ import { Wallet } from 'bnc-onboard/dist/src/interfaces'
 // This providers have direct relation with name assigned in bnc-onboard configuration
 export enum WALLET_PROVIDER {
   METAMASK = 'METAMASK',
-  TALLYHO = 'TALLYHO',
-  TORUS = 'TORUS',
-  PORTIS = 'PORTIS',
-  FORTMATIC = 'FORTMATIC',
-  SQUARELINK = 'SQUARELINK',
-  WALLETCONNECT = 'WALLETCONNECT',
-  TRUST = 'TRUST',
-  OPERA = 'OPERA',
-  // This is the provider for WALLET_LINK configuration on bnc-onboard
-  COINBASE_WALLET = 'COINBASE WALLET',
-  AUTHEREUM = 'AUTHEREUM',
-  LEDGER = 'LEDGER',
-  TREZOR = 'TREZOR',
-  LATTICE = 'LATTICE',
-  KEYSTONE = 'KEYSTONE',
   // Safe name as PAIRING_MODULE_NAME
   SAFE_MOBILE = 'SAFE MOBILE',
 }
@@ -78,9 +63,7 @@ export const getChainIdFrom = (web3Provider: Web3): Promise<number> => {
 }
 
 export const isHardwareWallet = (wallet: Wallet): boolean => {
-  const isSupportedHardwareWallet = [WALLET_PROVIDER.LEDGER, WALLET_PROVIDER.TREZOR].includes(
-    wallet?.name?.toUpperCase() as WALLET_PROVIDER,
-  )
+  const isSupportedHardwareWallet = false;
   const isHardwareWalletType = wallet?.type === 'hardware'
 
   return isSupportedHardwareWallet || isHardwareWalletType

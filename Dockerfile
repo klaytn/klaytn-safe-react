@@ -6,13 +6,14 @@ RUN apt-get update \
 
 WORKDIR /app
 
-COPY package.json yarn.lock .
-
-COPY  src/logic/contracts/artifacts ./src/logic/contracts/artifacts
+COPY package.json yarn.lock ./
 
 RUN yarn install
 
 COPY . .
+
+RUN cp -r ./safe-deployment-assets/* ./node_modules/@gnosis.pm/safe-deployments/dist/assets/
+RUN cp -r ./safe-deployment-assets/* ./node_modules/@gnosis.pm/safe-core-sdk/node_modules/@gnosis.pm/safe-deployments/dist/assets/
 
 EXPOSE 3000
 

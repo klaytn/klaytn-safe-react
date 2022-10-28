@@ -37,6 +37,7 @@ const getClientMeta = (): IClientMeta => {
 }
 
 const getPairingModule = (chainId: ChainId): WalletModule => {
+
   const STORAGE_ID = 'SAFE__pairingProvider'
   const clientMeta = getClientMeta()
 
