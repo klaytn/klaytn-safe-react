@@ -2,7 +2,7 @@ name: klaytn-safe-react production deploy workflow
 on:
   push:
     tags:
-      - v[0-9].[0-9].[0-9]
+      - v[0-9]+.[0-9]+.[0-9]+
 
 jobs:
   deploy:
@@ -18,9 +18,9 @@ jobs:
       - name: Get AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          role-to-assume: ${{ secrets.AWS_IAM_ROLE_ARN }}
+          role-to-assume: ${{ secrets.AWS_IAM_ROLE_ARN_PROD }}
           role-session-name: SessionForKlaytnActions
-          aws-region: ${{ secrets.AWS_REGION }}
+          aws-region: ${{ secrets.AWS_REGION_PROD }}
 
       - name: Installing Node.js
         uses: actions/setup-node@v3
