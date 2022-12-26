@@ -176,8 +176,6 @@ const Layout: React.FC<Props> = ({
           {hasFooter && <Footer />}
         </ContentWrapper>
       </BodyWrapper>
-
-      {!mobileNotSupportedClosed && <MobileNotSupported onClose={closeMobileNotSupported} />}
     </Container>
   )
 }
