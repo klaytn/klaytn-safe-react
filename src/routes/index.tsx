@@ -9,6 +9,7 @@ import {
   generateSafeRoute,
   LOAD_SPECIFIC_SAFE_ROUTE,
   OPEN_SAFE_ROUTE,
+  TERMS_AND_CONDITIONS,
   ADDRESSED_ROUTE,
   WELCOME_ROUTE,
   ROOT_ROUTE,
@@ -25,6 +26,7 @@ import useSafeAddress from 'src/logic/currentSession/hooks/useSafeAddress'
 
 const Welcome = React.lazy(() => import('./welcome/Welcome'))
 const CreateSafePage = React.lazy(() => import('./CreateSafePage/CreateSafePage'))
+const TermsPage = React.lazy(() => import('./TermsPage/TermsPage'))
 const LoadSafePage = React.lazy(() => import('./LoadSafePage/LoadSafePage'))
 const SafeAppLandingPage = React.lazy(() => import('./SafeAppLandingPage/SafeAppLandingPage'))
 const SafeContainer = React.lazy(() => import('./safe/container'))
@@ -118,6 +120,8 @@ const Routes = (): React.ReactElement => {
       <Route component={Welcome} exact path={WELCOME_ROUTE} />
 
       <Route component={CreateSafePage} exact path={OPEN_SAFE_ROUTE} />
+
+      <Route component={TermsPage} exact path={TERMS_AND_CONDITIONS} />
 
       <Route
         path={ADDRESSED_ROUTE}

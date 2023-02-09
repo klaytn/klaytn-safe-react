@@ -126,7 +126,7 @@ const Layout = ({ classes, providerDetails, providerInfo }) => {
               <Img alt="Klaytn Safe" height={36} src={SafeLogo} testId="heading-gnosis-logo" id="safe-logo" />
               <div className={classes.bannerLogoTitle}>
                 <div className={classes.bannerLogoTitleContent}>
-                  Klaytn Safe [BETA]
+                  Klaytn Safe
                 </div>
                 <div className={classes.bannerLogoSubTitleContent}>
                   (based on Gnosis Safe)

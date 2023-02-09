@@ -61,11 +61,9 @@ const Footer = (): React.ReactElement => {
         ©{date.getFullYear()} Klaytn Foundation
       </Link>
       <span className={classes.sep}>|</span>
-      <span className={classes.item}>Terms</span>
-      <span className={classes.sep}>|</span>
-      <span className={classes.item}>Privacy</span>
-      <span className={classes.sep}>|</span>
-      <span className={classes.item}>Licenses</span>
+      <Link className={cn(classes.item, classes.link)} target="_blank" to="/terms">
+        Terms & Privacy
+      </Link>
     </footer>
   )
 }
