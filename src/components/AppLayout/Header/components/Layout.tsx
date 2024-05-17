@@ -69,25 +69,25 @@ const styles = () => ({
   bannerLogo: {
     display: 'flex',
     flexDirection: 'row',
-    textDecoration: 'none'
+    textDecoration: 'none',
   },
   bannerLogoTitle: {
     display: 'flex',
     flexDirection: 'column',
-    width: "200px",
-    paddingLeft: '5px'
+    width: '200px',
+    paddingLeft: '5px',
   },
   bannerLogoTitleContent: {
     color: '#000',
     fontSize: '16px',
-    fontWeight: 600
+    fontWeight: 600,
   },
   bannerLogoSubTitleContent: {
-    color: '#958B8B'
+    color: '#958B8B',
   },
   bannerLink: {
-    textDecoration: 'none'
-  }
+    textDecoration: 'none',
+  },
 })
 
 const WalletPopup = ({ anchorEl, providerDetails, classes, open, onClose }) => {
@@ -125,17 +125,18 @@ const Layout = ({ classes, providerDetails, providerInfo }) => {
             <div className={classes.bannerLogo}>
               <Img alt="Klaytn Safe" height={36} src={SafeLogo} testId="heading-gnosis-logo" id="safe-logo" />
               <div className={classes.bannerLogoTitle}>
-                <div className={classes.bannerLogoTitleContent}>
-                  Klaytn Safe
-                </div>
-                <div className={classes.bannerLogoSubTitleContent}>
-                  (based on Gnosis Safe)
-                </div>
+                <div className={classes.bannerLogoTitleContent}>Klaytn Safe</div>
+                <div className={classes.bannerLogoSubTitleContent}>(based on Gnosis Safe)</div>
               </div>
             </div>
           </Link>
         </Track>
       </Col>
+
+      <div style={{ color: '#f02525' }}>
+        <b>Scheduled Maintenance: </b>We will perform a scheduled system upgrade shortly after 21st May 2024 8:00 AM UTC
+        which will take approximately 3 hours.
+      </div>
 
       <Spacer />
 
