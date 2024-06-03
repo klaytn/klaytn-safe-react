@@ -1,3 +1,9 @@
+# <div align="center">‼️ This repository is deprecated ‼️</div>
+
+<div align="center"> Please use <a href="https://github.com/klaytn/klaytn-safe-wallet-web">klaytn/klaytn-safe-wallet-web</a> instead </div>
+
+---
+
 # Klaytn Safe web UI
 
 Klaytn Safe is the most trusted platform to store digital assets on Ethereum.
